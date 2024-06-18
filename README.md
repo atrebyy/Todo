@@ -1,6 +1,6 @@
-# Django Application Setup
+# Todo Application Setup
 
-This guide will help you set up and run the Django application from the repository on your local machine.
+This guide will help you set up and run the Todo application from the repository on your local machine.
 
 ## Prerequisites
 
