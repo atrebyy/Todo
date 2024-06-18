@@ -1,0 +1,17 @@
+{% extends "main/layout.html" %}
+{% block body %}
+<h3>Current Tasks</h3>
+<ul>
+    {% for task in tasks %}
+    <li>{{ task }}</li>
+    {% empty %}
+    <p>No tasks due 😉</p><br>
+    {% endfor %}
+</ul>
+<a href="{% url "main:add" %}">Add Task</a><br>
+<a href="{% url "main:remove" %}">Remove Task</a>
+<form action="{% url "main:index" %}" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Clear All">
+</form>
+{% endblock %}
